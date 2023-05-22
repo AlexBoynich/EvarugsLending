@@ -1,14 +1,12 @@
-    {# <div class="slider-wrapper">
-        <div class="arrow_left"><img src="@/assets/arrow.png"/></div>
-
-        <swiper class="swiper container" :options="swiperOption">
-            <swiper-slide
-                v-for="(slide, index) in socialInfo.content"
-                :key="index"
-            >
-                <img :src="slide.icon"/>
-            </swiper-slide>
-        </swiper>
-        
-        <div class="arrow_right"><img src="@/assets/arrow.png"/></div>
-    </div> #}
+    <div class="slider-wrapper">
+        <div class="arrow_left"><img src="/img/arrow.png"/></div>
+            <swiper class="swiper container" :options="swiperOption">
+                <swiper-slide
+                    v-for="(slide, index) in feedbacks"
+                    :key="index"
+                >
+                    <img :src="slide.link"/>
+                </swiper-slide>
+            </swiper>
+        <div class="arrow_right"><img src="/img/arrow.png"/></div>
+    </div>

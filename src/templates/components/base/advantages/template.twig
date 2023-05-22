@@ -1,3 +1,9 @@
-<div>
-<p>apoflhgbaoigopieaghkmpoae</p>
-</div>
+<div class='blockAdventages container'>
+    {% for advantage in advantages %}
+        <div class='advantages'>
+            <img src='{{advantage.link}}' alt='Фото'>
+            <h2>{{advantage.title}}</h2>
+            <p>{{advantage.text}}</p>
+        </div>
+    {% endfor %}
+</div>    
