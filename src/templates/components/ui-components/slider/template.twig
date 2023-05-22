@@ -1,12 +1,13 @@
     <div class="slider-wrapper">
         <div class="arrow_left"><img src="/img/arrow.png"/></div>
-            <swiper class="swiper container" :options="swiperOption">
-                <swiper-slide
-                    v-for="(slide, index) in feedbacks"
-                    :key="index"
-                >
-                    <img :src="slide.link"/>
-                </swiper-slide>
-            </swiper>
+                {% for (slide, index) in slides %}
+                    <div class='slider'>
+                        <img src='{{slide.link}}' alt='Фото'>
+                        <h6>{{slide.text}}</h6>
+                        <p>{{slide.author}}</p>
+                    </div>
+                {% endfor %}
         <div class="arrow_right"><img src="/img/arrow.png"/></div>
     </div>
+
+  
