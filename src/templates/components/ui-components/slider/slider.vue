@@ -1,13 +1,13 @@
-<!-- <template>
+<template>
     <div class="slider-wrapper">
-        <div class="arrow_left"><img src="@/assets/arrow.png"/></div>
+        <div class="arrow_left"><img src="/img/arrow.png"/></div>
 
         <swiper class="swiper container" :options="swiperOption">
             <swiper-slide
-                v-for="(slide, index) in socialInfo.content"
+                v-for="(slide, index) in slides"
                 :key="index"
             >
-                <img :src="slide.icon"/>
+                <img :src="slide.link"/>
             </swiper-slide>
         </swiper>
         
@@ -37,15 +37,8 @@
                 ],
                 data: [],
             }
-        },
-        mounted() {
-            this.getSocialInfo();
-        },
-        methods: {
-            ...mapActions('slider', ['getSocialInfo']),
         },  
         computed: {
-            ...mapGetters('slider', ['socialInfo']),
             swiperOption() {
                 return {
                     slidesPerView: 1,
@@ -110,4 +103,4 @@
     .swiper-slide img {
         width: 100%;
     }
-</style> -->
+</style>
