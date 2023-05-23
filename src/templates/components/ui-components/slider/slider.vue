@@ -11,7 +11,7 @@
             </swiper-slide>
         </swiper>
         
-        <div class="arrow_right"><img src="@/assets/arrow.png"/></div>
+        <div class="arrow_right"><img src="/img/arrow.png"/></div>
     </div>
 </template>
 

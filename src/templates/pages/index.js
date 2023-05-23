@@ -1,7 +1,7 @@
 import routerPageHook from '@utilities/routerPageHook.js';
 import Vue from 'vue';
 import { mapState } from 'vuex';
-import slider from '@components/ui-components/slider/slider.vue'
+// import slider from '@components/ui-components/slider/slider.vue'
 
 export default {
     name: 'index',
@@ -14,7 +14,7 @@ export default {
         ...mapState('mobile', ['isMobile']),
     },
     components: {
-        slider
+        // slider
     },
     ...routerPageHook,
     render(createElement) {
