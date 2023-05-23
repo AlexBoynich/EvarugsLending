@@ -6,12 +6,14 @@
                 <img src='/img/logo1.png' alt="Логотуп1">
                 <img src='/img/logo2.png' alt="Логотуп2">
             </div>
+            <img class='backImg1' src='/img/backImg1.png' alt="фон">
+            <img class='backImg2' src='/img/backImg2.png' alt="фон">
+            <img class='backImg3' src='/img/backImg3.png' alt="фон">
             <div class='pagesLinks'>
                 <p>отзывы</p>
                 <p>что это?</p>
                 <p>контакты</p>
             </div>
-            <img src='/img/backImg1.png' alt="фон">
         </div> 
         <div class='mainSlogan container'>
             <h2>Инновационные коврики<br> для автомобиля</h2>
@@ -19,8 +21,8 @@
             <button class='button'><b>ЗАКАЗАТЬ</b></button>
         </div>   
         <h2 style='text-align: center'>Что такое <span class='eva'>EVA</span> коврики?</h2>
-        {% include "@components/base/advantages/template.twig" %}
+            {% include "@components/base/advantages/template.twig" %}
         {# {% include "@components/ui-components/slider/template.twig" %} #}
-        {# <slider></slider> #}
+        <slider></slider>
     </main>
 {% endblock %}

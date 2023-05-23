@@ -1,9 +1,12 @@
 <div class='blockAdventages container'>
+    <img class='backImg5' src='/img/backImg5.png' alt="фон">
     {% for advantage in advantages %}
         <div class='advantages'>
             <img src='{{advantage.link}}' alt='Фото'>
-            <h2>{{advantage.title}}</h2>
-            <p>{{advantage.text}}</p>
+            <div class='description'>
+                <h2 class='text'>{{advantage.title}}</h2>
+                <p class='text'>{{advantage.text}}</p>
+            </div>
         </div>
     {% endfor %}
 </div>    

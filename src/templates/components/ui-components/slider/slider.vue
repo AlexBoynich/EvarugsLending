@@ -17,8 +17,6 @@
 
 <script>
     import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-    import 'swiper/css/swiper.css'
-    import { mapActions, mapGetters } from 'vuex';
     export default {
         name: 'Slider',
         components: {
@@ -28,12 +26,9 @@
         data: () => {
             return {
                 slides: [
-                    '/1.png',
-                    '/2.png',
-                    '/3.png',
-                    '/4.png',
-                    '/5.png',
-                    '/6.png',
+                    '/img/otz1.png',
+                    '/img/otz2.png',
+                    '/img/otz3.png',
                 ],
                 data: [],
             }
@@ -66,41 +61,44 @@
     }
 </script>
 
-<style scoped>
-    .slider-wrapper {
-        padding: 0 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .swiper-button-prev {
-        left: 20px
-    }
-    .swiper-button-next {
-        right: 20px
-    }
-    .swiper-button-next  img {
-        transform: rotate(180deg);
-    }
-    .swiper-button-prev, .swiper-button-next {
-        width: 48px;
-        height: 48px;
-        background: transparent;
-    }
-    .swiper-button-prev:after, .swiper-button-next:after {
-        content: none
-    }
-    .arrow_left, .arrow_right {
-        cursor: pointer;
-        border: none;
-        background: transparent;
-        width: 48px;
-        height: 48px;
-    }
-    .arrow_right img {
-        transform: rotate(180deg);
-    }
-    .swiper-slide img {
-        width: 100%;
-    }
+<style scoped lang="sass">
+// .slider-wrapper 
+//     padding: 0 20px
+//     display: flex
+//     align-items: center
+//     justify-content: space-between
+    
+// .swiper-button-prev 
+//     left: 20px
+    
+// .swiper-button-next 
+//     right: 20px
+    
+// .swiper-button-next 
+//     img 
+//         transform: rotate(180deg)
+    
+// .swiper-button-prev, .swiper-button-next 
+//     width: 48px
+//     height: 48px
+//     background: transparent
+    
+// .swiper-button-prev:after, .swiper-button-next:after 
+    
+//     content: none
+    
+// .arrow_left, .arrow_right 
+//     cursor: pointer
+//     border: none
+//     background: transparent
+//     width: 48px
+//     height: 48px
+    
+// .arrow_right 
+//     img 
+//         transform: rotate(180deg)
+    
+// .swiper-slide 
+//     img 
+//         width: 100%
 </style>
