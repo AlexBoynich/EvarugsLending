@@ -2,12 +2,17 @@
     <div class="slider-wrapper">
         <div class="arrow_left"><img src="/img/arrow.png"/></div>
 
-        <swiper class="swiper container" :options="swiperOption">
+        <swiper class="swiper" :options="swiperOption">
             <swiper-slide
                 v-for="(slide, index) in slides"
                 :key="index"
             >
-                <img :src="slide.link"/>
+            <div class="feedbackBlock">
+                <img :src='slide.link' class="feedbackImg d16"/>
+                <p class="feedbackText">{{ slide.text }}</p>
+                <hr>
+                <p class="feedbackAuthor">{{slide.author}}</p>
+            </div>
             </swiper-slide>
         </swiper>
         
@@ -16,19 +21,14 @@
 </template>
 
 <script>
-    import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
     export default {
         name: 'Slider',
-        components: {
-            Swiper,
-            SwiperSlide
-        },
         data: () => {
             return {
                 slides: [
-                    '/img/otz1.png',
-                    '/img/otz2.png',
-                    '/img/otz3.png',
+                    {link: '/img/otz1.png', text: 'Покупала у ребят коврики для Хундай солярис в подарок молодому человеку. Все очень понравилось. Буду советовать только вас.', author: 'Вера К.'},
+                    {link: '/img/otz2.jpg', text: 'Коврики супер!!! Качество на высшем уровне!!!Удачи и побольше заказов вам!!! Большое спасибо!', author: 'Константин В.'},
+                    {link: '/img/otz3.jpg', text: 'Спасибо, все приехало, поставил. Результатом доволен, в машине супер! Заказывал на Ниссан.', author: 'Николай П.'},
                 ],
                 data: [],
             }
@@ -36,7 +36,7 @@
         computed: {
             swiperOption() {
                 return {
-                    slidesPerView: 1,
+                    slidesPerView: 3,
                     spaceBetween: 20,
                     slidesPerGroup: 3,
                     loop: true,
@@ -51,7 +51,7 @@
                             spaceBetween: 20
                         },
                         1115: {
-                            slidesPerView: 6,
+                            slidesPerView: 3,
                             spaceBetween: 20
                         }
                     }

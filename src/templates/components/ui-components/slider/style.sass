@@ -3,7 +3,15 @@
     display: flex
     align-items: center
     justify-content: space-between
+    background: linear-gradient(94.31deg, rgba(212, 20, 90, 0.25) 0.96%, rgba(46, 49, 146, 0.25) 104.83%)
+    height: 357px
+    width: 2150px
+    margin-left: -60px
     
+.swiper-slide
+    display: flex
+    justify-content: center 
+
 .swiper-button-prev 
     left: 20px
     
@@ -28,9 +36,48 @@
     width: 48px
     height: 48px
     
-.arrow_right img 
-    transform: rotate(180deg)
+.arrow_right 
+    img 
+        transform: rotate(180deg)
     
-.swiper-slide img 
-    width: 100%
-    
+.d16 
+    margin: 20px 0
+    width: 100px
+    height: 55px
+    background: #F1CCAE
+    position: relative
+
+.d16:before, 
+.d16:after 
+    content: ""
+    width: 0 
+    height: 0
+    position: absolute
+    left: 0
+    border-left: 50px solid transparent
+    border-right: 50px solid transparent
+
+.d16:before 
+    top: -25px
+    border-bottom: 25px solid #F1CCAE
+
+.d16:after 
+    bottom: -25px
+    border-top: 25px solid #F1CCAE
+
+
+
+.feedbackBlock
+    display: flex
+    flex-direction: column
+    width: 536px
+    height: 187px
+    align-items: center
+    border-radius: 9px
+    background: #FFFFFF
+
+    hr
+        width: 130px
+    .feedbackText
+        margin: 20px 44px   
+

@@ -6,12 +6,12 @@ import { mapMutations, mapState } from 'vuex';
 import Curtain from '@components/base/curtain/component';
 import Header from '@components/base/header/component';
 import Modal from '@components/base/modal/modal.vue';
+import VueAwesomeSwiper from 'vue-awesome-swiper';
 
 import { router } from './routes';
 import { store } from './store';
 import { meta } from './utilities/meta';
 
-// import VueAwesomeSwiper from 'vue-awesome-swiper';
 // import vClickOutside from 'v-click-outside';
 // import VueCookie from 'vue-cookie';
 // import { VueMaskDirective } from 'v-mask';
@@ -28,7 +28,7 @@ import { meta } from './utilities/meta';
 
 Vue.use(VueResource);
 
-// Vue.use(VueAwesomeSwiper /* { default global options } */);
+Vue.use(VueAwesomeSwiper /* { default global options } */);
 
 // Директива v-click-outside собитые при клике вне элемента
 // Vue.use(vClickOutside);

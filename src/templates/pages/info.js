@@ -57,7 +57,6 @@ const data = {
         },
         {
             link: '/img/otz3',
-
         }
     ],
 };
