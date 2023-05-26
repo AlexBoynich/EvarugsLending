@@ -39,7 +39,7 @@
         computed: {
             swiperOption() {
                 return {
-                    slidesPerView: 2.5,
+                    slidesPerView: 3,
                     spaceBetween: 70,
                     slidesPerGroup: 1,
                     loop: true,
