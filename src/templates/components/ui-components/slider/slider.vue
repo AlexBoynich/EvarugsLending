@@ -1,6 +1,5 @@
 <template>
     <div class="slider-wrapper">
-        <div class="arrow_left"><img src="/img/arrow.png"/></div>
 
         <swiper class="swiper" :options="swiperOption">
             <swiper-slide
@@ -8,15 +7,19 @@
                 :key="index"
             >
             <div class="feedbackBlock">
-                <img :src='slide.link' class="feedbackImg d16"/>
-                <p class="feedbackText">{{ slide.text }}</p>
-                <hr>
-                <p class="feedbackAuthor">{{slide.author}}</p>
+                <div class="hexagon">
+                    <div v-bind:class="[{shape1: index===0}, {shape2: index===1}, {shape3: index===2}]"></div>
+
+                </div>
+                <div class="feedbackSubBlock">
+                    <p class="feedbackText">{{ slide.text }}</p>
+                    <img src="/img/hr.png" alt="">
+                    <p class="feedbackAuthor">{{slide.author}}</p>
+                </div>
             </div>
             </swiper-slide>
         </swiper>
         
-        <div class="arrow_right"><img src="/img/arrow.png"/></div>
     </div>
 </template>
 
@@ -36,15 +39,12 @@
         computed: {
             swiperOption() {
                 return {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                    slidesPerGroup: 3,
+                    slidesPerView: 2.5,
+                    spaceBetween: 70,
+                    slidesPerGroup: 1,
                     loop: true,
+                    centeredSlides: true,
                     loopFillGroupWithBlank: true,
-                    navigation: {
-                        nextEl: '.arrow_right',
-                        prevEl: '.arrow_left'
-                    },
                     breakpoints: {
                         600: {
                             slidesPerView: 3,
